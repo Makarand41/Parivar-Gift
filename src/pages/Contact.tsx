@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -70,6 +70,9 @@ const Contact = () => {
     (e.target as HTMLFormElement).reset();
   };
 
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
       {/* Hero */}

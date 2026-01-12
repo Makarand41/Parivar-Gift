@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, Users, Globe, Recycle, Factory, CheckCircle } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
+import { useEffect } from 'react';
 
 const timeline = [
   { year: '2013', title: 'Company Founded', description: 'Started with a vision to provide quality plastic products' },
@@ -32,6 +33,11 @@ const process = [
 ];
 
 const About = () => {
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <Layout>
       {/* Hero */}

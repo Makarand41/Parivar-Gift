@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Star, ShoppingCart, Heart, Minus, Plus, ChevronRight, Truck, Shield, RotateCcw } from 'lucide-react';
@@ -42,6 +42,10 @@ const ProductDetail = () => {
     addToCart(product, quantity, selectedColor, selectedSize);
     toast.success(`${product.name} added to cart!`);
   };
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Layout>
