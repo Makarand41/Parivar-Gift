@@ -32,15 +32,14 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between gap-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold text-primary-foreground">P</span>
-          </div>
-          <div className="hidden sm:block">
-            <span className="text-lg font-bold text-foreground">PARIVAR</span>
-            <span className="ml-1 text-sm font-medium text-muted-foreground">Premium</span>
-          </div>
-        </Link>
+      {/* Logo */}
+<Link to="/" className="flex items-center gap-2">
+  <img 
+    src="/logo.jpeg" 
+    alt="PARIVAR Premium Logo" 
+    className="h-12 w-auto object-contain" 
+  />
+</Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
